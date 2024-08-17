@@ -1,0 +1,53 @@
+Understanding the question
+
+	what is an API ?
+An Application Programming Interface is a tool and a set of rules
+that enable softwares applications to communicate to eah other. It allows for the
+transfer and manipulation of data.
+In a simpler context they can be regarded as a waiter in a hotel set-up,
+connecting a customer(client at the UI) and the kitchen/serving room(the backend of the applination)
+
+
+	What the question says!
+Okay, the question starts by mentioning a Groupie Tracker,
+which in a general understanding, is a way of tracking a fan base application
+for an artist or a band. True to its name that is what it actually does.
+
+We are required to take information from an API, probably an API Directory to read a map of API endpoints that contain the data for artists, dates, location and the relations.
+
+Additionally we are required to create a friendly website, that will be used to render the data we collect  from the APIs.
+A range of options are provided to render the details in the web pages: [blocks, cards, tables, list, pages, graphics etc.]
+
+The project is meant to allow us learn more about: Manipulation and storage of data, JSON and format, HTML, Event creation and display, Client-Server.
+
+
+	What is a JSON ?
+Well, Java Script Object Notation is a lightweight format used to
+storing and exchanging data. Like a way to format data for it to be readable by any machine and even humans.
+
+A JSON is made up of:
+	Curly Braces => Defines an object
+	Key-value Pairs => a label can be the key and the actual data can be the value
+	Arrays => Are ordered list of values
+
+okay, let us learn how we can access these data in the JSON to use in our APIs.
+To access information(data) developers make certain HTTP requests using GET method or POST to the API endpoint, this will return a URL containing a JSON formatted data.
+/n/nHow does the server(our backend) receive our JSON response ?
+The
+ server processes the request and responds with data from as JSON whoh is typically a string that needs to be parsed.
+
+Let us know how to parse the data from the API(which is in a JSON format). Usually, we would use a function in Java Script Json.parse() to convert Json string into a usable Java Script object.
+
+I know, we need to try and stick more on the Golang side and avoid shortcuts, as thtis the best way to learn something, doing it from scratch.
+And so, let us see how we can do this instead in Golang(Parse data from the Json format t) to a form we can use in Golang
+
+	Define Custom types:
+First we will need to defie the custom types(structures) of the Json data that we will be expecting
+
+	Next we will make some requests to the API endpoint that returns JSON data
+After that, we will need to unmarshal the data into our struct using the json.Unmarshal()
+Once unmarshalled, we can access the data through our structures.
+
+After parsing, specific data is then accessed using a dot notation or a bracket notation. i.e: if the data contains many data, a loop can be used to access certain data wanted from it.
+
+Finally the data is then used to display through the html documentation in the web pages.
